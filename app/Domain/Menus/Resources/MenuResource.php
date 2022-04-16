@@ -17,7 +17,7 @@ class MenuResource extends JsonResource
         return [
             'name' => $this->name,
             'parent_id' => $this->parent_id,
-            'child' => $this->allChildMenus
+            'child' => $this->child
         ];
     }
 }

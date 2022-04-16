@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Domain\Persons\Models\Person;
+use App\Domain\Persons\Models\WorkingDays;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            MenuSeeder::class
+            DocumentSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
     }

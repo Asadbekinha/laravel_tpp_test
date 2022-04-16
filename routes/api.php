@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Api\HomeScreenController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DocumentsController;
+use App\Http\Controllers\PersonsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +28,6 @@ Route::get('home/usefullsites', [HomeScreenController::class, 'getUsefullLinks']
 Route::get('home/indicators', [HomeScreenController::class, 'getIndicators'])->name('home.indicators.all');
 Route::get('home/statistics', [HomeScreenController::class, 'getStatistics'])->name('home.statistics.all');
 Route::get('home/menus', [HomeScreenController::class, 'getMenus'])->name('home.menus.all');
+Route::get('persons', [PersonsController::class, 'getPersons'])->name('persons.all');
+Route::get('documents', [DocumentsController::class, 'getDocuments'])->name('documents.all');
+Route::post('contact/send', [ContactController::class, 'sendMessage'])->name('message.send');
