@@ -14,8 +14,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            BannersSeeeder::class,
-            NewsSeeder::class
+            MenuSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
     }
